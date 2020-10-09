@@ -28,7 +28,7 @@ export class ToDoListComponent implements OnInit {
         done:false
     })}
     else{
-      this.error="Pleas enter to to task"
+      this.error="Please enter a task"
     }
   }
   doneToTrue(id){
