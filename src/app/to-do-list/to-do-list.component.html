@@ -1,0 +1,11 @@
+<div>
+    <label for="addToDo">Add new task </label>
+    <input id="addToDo" type="text" #toDoName>
+    <button (click)="addToDo(toDoName.value)">Add</button>
+    <div><span class="error">{{ error}}</span></div>
+</div>
+
+<h2>To do list: </h2>
+<ul class="toDoList" *ngFor="let toDo of toDoList">
+    <app-to-do-one (onCheckboxDone)="doneToTrue($event)" [toDo]="toDo"></app-to-do-one>
+</ul>

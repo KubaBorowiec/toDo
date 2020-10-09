@@ -1,0 +1,6 @@
+<li [ngClass]="{'done': toDo.done === true}">
+<span>
+    {{ toDo.name}}
+</span>
+<input *ngIf="!toDo.done"  type="checkbox" (click)="clickCheck(toDo.id)" >
+</li>
